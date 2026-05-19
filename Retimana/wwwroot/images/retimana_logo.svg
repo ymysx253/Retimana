@@ -1,0 +1,12 @@
+<svg width="640" height="130" viewBox="135 50 320 65" xmlns="http://www.w3.org/2000/svg">
+  <title>Retimana logo</title>
+  <desc>Retimana logo with pin icon and serif wordmark in warm brown</desc>
+
+  <g transform="translate(148, 58)">
+    <circle cx="24" cy="24" r="18" fill="none" stroke="#7D6E63" stroke-width="2.5"/>
+    <circle cx="24" cy="24" r="7" fill="#7D6E63"/>
+    <path d="M16 38 Q24 52 32 38" fill="#7D6E63"/>
+  </g>
+
+  <text x="200" y="100" font-size="48" fill="#5C4F47" font-family="Georgia, serif" font-weight="400" letter-spacing="5">Retimana</text>
+</svg>

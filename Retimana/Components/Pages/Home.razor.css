@@ -1,0 +1,78 @@
+.home {
+    position: relative;
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: var(--retimana-bg);
+    color: var(--retimana-text);
+    overflow: hidden;
+}
+
+.home-content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: clamp(2.5rem, 8vh, 4.5rem);
+}
+
+.app-title {
+    margin: 0;
+    line-height: 0;
+    user-select: none;
+}
+
+.app-logo {
+    display: block;
+    width: clamp(16rem, 70vw, 26rem);
+    max-width: calc(100vw - 2rem);
+    height: auto;
+}
+
+.start-button {
+    font-family: inherit;
+    font-size: 1.25rem;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    padding: 0.9rem 2.8rem;
+    min-width: 10rem;
+    border: none;
+    border-radius: 10px;
+    background: #8B7D6E;
+    color: #EDE5D5;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(60, 50, 40, 0.18);
+    transition: transform 0.1s ease, box-shadow 0.2s ease;
+}
+
+.start-button:hover {
+    box-shadow: 0 6px 14px rgba(60, 50, 40, 0.24);
+}
+
+.start-button:active {
+    transform: translateY(1px);
+    box-shadow: 0 2px 6px rgba(60, 50, 40, 0.2);
+}
+
+.start-button:focus-visible {
+    outline: 3px solid #8B7D6E;
+    outline-offset: 4px;
+}
+
+@media (prefers-color-scheme: dark) {
+    .app-logo {
+        filter: invert(1) hue-rotate(180deg) brightness(0.92);
+    }
+
+    .start-button {
+        background: #C8BBA8;
+        color: #2A2622;
+    }
+
+    .start-button:focus-visible {
+        outline-color: #C8BBA8;
+    }
+}

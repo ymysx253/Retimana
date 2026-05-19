@@ -1,0 +1,14 @@
+<svg width="480" height="180" viewBox="0 0 680 180" xmlns="http://www.w3.org/2000/svg">
+  <title>Retimana logo with tagline</title>
+  <desc>Retimana logo with pin icon, serif wordmark and Latin tagline in warm brown</desc>
+
+  <g transform="translate(148, 58)">
+    <circle cx="24" cy="24" r="18" fill="none" stroke="#7D6E63" stroke-width="2.5"/>
+    <circle cx="24" cy="24" r="7" fill="#7D6E63"/>
+    <path d="M16 38 Q24 52 32 38" fill="#7D6E63"/>
+  </g>
+
+  <text x="200" y="100" font-size="48" fill="#5C4F47" font-family="Georgia, serif" font-weight="400" letter-spacing="5">Retimana</text>
+
+  <text x="202" y="125" font-size="11" fill="#B4B2A9" font-family="Georgia, serif" letter-spacing="2">Realis · Tempus · Mappa · Navigare</text>
+</svg>

@@ -1,3 +1,30 @@
+:root {
+    color-scheme: light dark;
+
+    --retimana-bg: #F5F0E8;
+    --retimana-text: #5F5850;
+    --retimana-accent: #5F5850;
+    --retimana-accent-text: #F5F0E8;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --retimana-bg: #2A2622;
+        --retimana-text: #E8E0D0;
+        --retimana-accent: #E8E0D0;
+        --retimana-accent-text: #2A2622;
+    }
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    background: var(--retimana-bg);
+    color: var(--retimana-text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Sans", "Yu Gothic UI", "Meiryo", system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
 h1:focus {
     outline: none;
 }

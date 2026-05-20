@@ -1,0 +1,15 @@
+@page "/area"
+@inject IStringLocalizer<SharedResources> L
+
+<PageTitle>@L["AreaSelect.Title"] - Retimana</PageTitle>
+
+<div class="area-select">
+    <h1 class="page-title">@L["AreaSelect.Title"]</h1>
+    <svg class="japan-map" viewBox="0 0 1536 1024" preserveAspectRatio="xMidYMid meet"
+         xmlns="http://www.w3.org/2000/svg" role="img" aria-label="@L["AreaSelect.MapAlt"]">
+        <image href="images/japanmap.png" x="0" y="0" width="1536" height="1024" />
+        <g class="area-labels">
+            @* 地方名のテキストはここに追加（座標は1536×1024の画像基準） *@
+        </g>
+    </svg>
+</div>

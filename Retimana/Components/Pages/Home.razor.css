@@ -33,6 +33,9 @@
 }
 
 .start-button {
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
     font-family: inherit;
     font-size: 1.25rem;
     font-weight: 500;
@@ -62,6 +65,34 @@
     outline-offset: 4px;
 }
 
+.language-switcher {
+    position: absolute;
+    bottom: 1.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    margin: 0;
+    padding: 0;
+}
+
+.language-select {
+    font-family: inherit;
+    font-size: 0.95rem;
+    padding: 0.45rem 0.9rem;
+    border: 1px solid rgba(95, 88, 80, 0.3);
+    border-radius: 8px;
+    background: rgba(245, 240, 232, 0.85);
+    color: #5F5850;
+    cursor: pointer;
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+}
+
+.language-select:focus-visible {
+    outline: 2px solid #8B7D6E;
+    outline-offset: 2px;
+}
+
 @media (prefers-color-scheme: dark) {
     .app-logo {
         filter: invert(1) hue-rotate(180deg) brightness(0.92);
@@ -73,6 +104,16 @@
     }
 
     .start-button:focus-visible {
+        outline-color: #C8BBA8;
+    }
+
+    .language-select {
+        background: rgba(42, 38, 34, 0.85);
+        color: #E8E0D0;
+        border-color: rgba(232, 224, 208, 0.3);
+    }
+
+    .language-select:focus-visible {
         outline-color: #C8BBA8;
     }
 }

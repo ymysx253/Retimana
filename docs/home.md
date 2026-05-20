@@ -17,6 +17,15 @@
 - `MapBackground` を `position: absolute / inset: 0` で全面に敷く（`z-index: 0`）
 - `.home-content` ラッパー（`z-index: 1`）に **タイトル + スタートボタン** を縦に積み、間に `gap: clamp(2.5rem, 8vh, 4.5rem)` の余白
 - ラッパー全体が画面中央に来るため、タイトルが中央より上・スタートボタンが中央より下に自然配置される
+- `.language-switcher`（`z-index: 1`）は画面下部に `position: absolute; bottom: 1.5rem; left: 50%; transform: translateX(-50%)` で配置
+
+### 言語切替プルダウン
+- マークアップ: `<form method="get" action="/set-language">` の中に `<select>` を配置（日本語/English/中文/한국어 の4言語）
+- 動作: `onchange="this.form.submit()"` で GET 送信 → サーバーが `.AspNetCore.Culture` クッキーをセット → `returnUrl` にリダイレクト
+- Blazor インタラクティビティ不要（静的SSRで動く）
+- スタイル: 半透明クリーム背景 + `backdrop-filter: blur(4px)` で地図背景越しに馴染ませる
+- ダークモード: 半透明ダーク背景 + 明るい文字色に切替
+- 多言語対応の全体構成は [docs/i18n.md](i18n.md) を参照
 
 ### タイトル「Retimana」（ロゴSVG）
 - 元アセット: [docs/design/home/logo/retimana_logo.svg](design/home/logo/retimana_logo.svg)（ピン型アイコン + Georgia serif の "Retimana" ワードマーク、暖色ブラウン）
@@ -91,3 +100,6 @@
 - 2026-05-19: 地図風背景画像（home-bg.png）を追加、ボタンスタイルをデザインに合わせて調整
 - 2026-05-19: 一度SVGで地図全体を手書き再現を試みたが画像品質に届かず破棄。地図は画像、SVGはバスアニメーション用オーバーレイ層に分離する構成に変更
 - 2026-05-19: アプリ名「Retimana」を中央上に追加、スタートボタンを中央下に配置（flexの縦並びで自然に上下分割）
+- 2026-05-20: 画面下に言語切替プルダウン（日本語/English/中文/한국어）を設置（UIのみ、切替ロジックは未配線）
+- 2026-05-20: スタートボタンを `<button>` から `<a href="area">` に変更し、`/area`（地方選択画面）へ遷移するように配線
+- 2026-05-20: 多言語対応を導入。表示テキストを `IStringLocalizer<SharedResources>` 経由に変更、言語切替プルダウンを `/set-language` エンドポイントに配線して実動作させた

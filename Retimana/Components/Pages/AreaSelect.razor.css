@@ -1,0 +1,39 @@
+.area-select {
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background: var(--retimana-bg);
+    color: var(--retimana-text);
+    padding: 1.5rem 0;
+    gap: 1.25rem;
+}
+
+.page-title {
+    margin: 0;
+    padding: 0 1rem;
+    font-size: clamp(1.4rem, 5vw, 2rem);
+    font-weight: 300;
+    letter-spacing: 0.18em;
+    color: #5F5850;
+    text-align: center;
+}
+
+.japan-map {
+    display: block;
+    width: 100%;
+    max-width: 48rem;
+    height: auto;
+    margin: 0 auto;
+}
+
+.area-labels {
+    /* 地方名テキストの共通スタイルは後で追加 */
+}
+
+@media (prefers-color-scheme: dark) {
+    .page-title {
+        color: #E8E0D0;
+    }
+}

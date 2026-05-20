@@ -1,4 +1,5 @@
 @page "/"
+@inject IStringLocalizer<SharedResources> L
 
 <PageTitle>Retimana</PageTitle>
 
@@ -8,6 +9,34 @@
         <h1 class="app-title">
             <img class="app-logo" src="images/retimana_logo.svg" alt="Retimana" />
         </h1>
-        <button class="start-button" type="button">スタート</button>
+        <a class="start-button" href="area">@L["Home.Start"]</a>
+    </div>
+    <div class="language-switcher">
+        <select class="language-select" aria-label="@L["Home.LanguageAriaLabel"]"
+                onchange="location.href='/set-language?culture='+encodeURIComponent(this.value)+'&returnUrl='+encodeURIComponent(location.pathname+location.search)">
+            @foreach (var lang in Languages)
+            {
+                @if (lang.Code == CurrentCulture)
+                {
+                    <option value="@lang.Code" selected>@lang.Label</option>
+                }
+                else
+                {
+                    <option value="@lang.Code">@lang.Label</option>
+                }
+            }
+        </select>
     </div>
 </div>
+
+@code {
+    private static readonly (string Code, string Label)[] Languages = new[]
+    {
+        ("ja", "日本語"),
+        ("en", "English"),
+        ("zh", "中文"),
+        ("ko", "한국어"),
+    };
+
+    private string CurrentCulture => CultureInfo.CurrentUICulture.TwoLetterISOLanguageName;
+}

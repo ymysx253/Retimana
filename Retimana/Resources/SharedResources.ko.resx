@@ -24,4 +24,31 @@
   <data name="AreaSelect.MapAlt" xml:space="preserve">
     <value>일본 지도</value>
   </data>
+  <data name="AreaSelect.Region.Hokkaido" xml:space="preserve">
+    <value>홋카이도</value>
+  </data>
+  <data name="AreaSelect.Region.Tohoku" xml:space="preserve">
+    <value>도호쿠</value>
+  </data>
+  <data name="AreaSelect.Region.Kanto" xml:space="preserve">
+    <value>간토</value>
+  </data>
+  <data name="AreaSelect.Region.Chubu" xml:space="preserve">
+    <value>주부</value>
+  </data>
+  <data name="AreaSelect.Region.Kinki" xml:space="preserve">
+    <value>긴키</value>
+  </data>
+  <data name="AreaSelect.Region.Chugoku" xml:space="preserve">
+    <value>주고쿠</value>
+  </data>
+  <data name="AreaSelect.Region.Shikoku" xml:space="preserve">
+    <value>시코쿠</value>
+  </data>
+  <data name="AreaSelect.Region.Kyushu" xml:space="preserve">
+    <value>규슈</value>
+  </data>
+  <data name="AreaSelect.Region.Okinawa" xml:space="preserve">
+    <value>오키나와</value>
+  </data>
 </root>

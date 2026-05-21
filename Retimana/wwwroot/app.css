@@ -29,6 +29,30 @@ h1:focus {
     outline: none;
 }
 
+/* AreaSelect 画面の地方名ラベル
+   MarkupString で挿入される <text> 要素にはコンポーネントのスコープ属性が付かないため
+   ここ（グローバルCSS）にスタイルを書く必要がある */
+.area-label {
+    font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic UI", "Meiryo", system-ui, sans-serif;
+    font-size: 72px;
+    font-weight: 600;
+    fill: #5C4F47;
+    text-anchor: middle;
+    dominant-baseline: central;
+    paint-order: stroke fill;
+    stroke: rgba(245, 240, 232, 0.75);
+    stroke-width: 5px;
+    stroke-linejoin: round;
+    user-select: none;
+}
+
+@media (prefers-color-scheme: dark) {
+    .area-label {
+        fill: #E8E0D0;
+        stroke: rgba(42, 38, 34, 0.75);
+    }
+}
+
 .valid.modified:not([type=checkbox]) {
     outline: 1px solid #26b050;
 }

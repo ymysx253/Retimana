@@ -9,7 +9,37 @@
          xmlns="http://www.w3.org/2000/svg" role="img" aria-label="@L["AreaSelect.MapAlt"]">
         <image href="images/japanmap.png" x="0" y="0" width="1536" height="1024" />
         <g class="area-labels">
-            @* 地方名のテキストはここに追加（座標は1536×1024の画像基準） *@
+            @((MarkupString)BuildLabelsSvg())
         </g>
     </svg>
 </div>
+
+@code {
+    // 座標は地図画像（1536×1024）上の中心位置。
+    private static readonly (int X, int Y, string Key)[] Regions = new[]
+    {
+        (1070, 220, "AreaSelect.Region.Hokkaido"),
+        (1010, 470, "AreaSelect.Region.Tohoku"),
+        ( 965, 700, "AreaSelect.Region.Kanto"),
+        ( 770, 700, "AreaSelect.Region.Chubu"),
+        ( 620, 760, "AreaSelect.Region.Kinki"),
+        ( 440, 725, "AreaSelect.Region.Chugoku"),
+        ( 440, 860, "AreaSelect.Region.Shikoku"),
+        ( 250, 870, "AreaSelect.Region.Kyushu"),
+        ( 220, 200, "AreaSelect.Region.Okinawa"),
+    };
+
+    private string BuildLabelsSvg()
+    {
+        // Razor の `<text>` 構文と衝突するため MarkupString で組み立てる。
+        // text-anchor / dominant-baseline は CSS でも指定しているが、属性で明示しておくと
+        // ブラウザによる解釈差を避けられる。
+        var sb = new System.Text.StringBuilder();
+        foreach (var r in Regions)
+        {
+            var label = System.Net.WebUtility.HtmlEncode(L[r.Key].Value);
+            sb.Append($"<text x=\"{r.X}\" y=\"{r.Y}\" text-anchor=\"middle\" dominant-baseline=\"central\" class=\"area-label\">{label}</text>");
+        }
+        return sb.ToString();
+    }
+}

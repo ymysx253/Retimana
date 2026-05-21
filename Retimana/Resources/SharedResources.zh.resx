@@ -24,4 +24,31 @@
   <data name="AreaSelect.MapAlt" xml:space="preserve">
     <value>日本地图</value>
   </data>
+  <data name="AreaSelect.Region.Hokkaido" xml:space="preserve">
+    <value>北海道</value>
+  </data>
+  <data name="AreaSelect.Region.Tohoku" xml:space="preserve">
+    <value>东北</value>
+  </data>
+  <data name="AreaSelect.Region.Kanto" xml:space="preserve">
+    <value>关东</value>
+  </data>
+  <data name="AreaSelect.Region.Chubu" xml:space="preserve">
+    <value>中部</value>
+  </data>
+  <data name="AreaSelect.Region.Kinki" xml:space="preserve">
+    <value>近畿</value>
+  </data>
+  <data name="AreaSelect.Region.Chugoku" xml:space="preserve">
+    <value>中国</value>
+  </data>
+  <data name="AreaSelect.Region.Shikoku" xml:space="preserve">
+    <value>四国</value>
+  </data>
+  <data name="AreaSelect.Region.Kyushu" xml:space="preserve">
+    <value>九州</value>
+  </data>
+  <data name="AreaSelect.Region.Okinawa" xml:space="preserve">
+    <value>冲绳</value>
+  </data>
 </root>

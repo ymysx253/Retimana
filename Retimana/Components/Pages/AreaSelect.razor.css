@@ -28,9 +28,9 @@
     margin: 0 auto;
 }
 
-.area-labels {
-    /* 地方名テキストの共通スタイルは後で追加 */
-}
+/* .area-label のスタイルはグローバルCSS (wwwroot/app.css) に置く。
+   理由: <text> 要素は MarkupString で挿入されるため Blazor のスコープ属性が付かず、
+   スコープ付きCSSルールが当たらない。 */
 
 @media (prefers-color-scheme: dark) {
     .page-title {

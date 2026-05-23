@@ -15,18 +15,19 @@
 </div>
 
 @code {
-    // 座標は地図画像（1536×1024）上の中心位置。
-    private static readonly (int X, int Y, string Key)[] Regions = new[]
+    // 座標は地図画像（1536×1024）上の中心位置。JaName は日本語以外の言語表示時に
+    // メインラベルの下に小さく併記する用（観光標識との照合のため）。
+    private static readonly (int X, int Y, string Key, string JaName)[] Regions = new[]
     {
-        (1070, 220, "AreaSelect.Region.Hokkaido"),
-        (1010, 470, "AreaSelect.Region.Tohoku"),
-        ( 965, 700, "AreaSelect.Region.Kanto"),
-        ( 770, 700, "AreaSelect.Region.Chubu"),
-        ( 620, 760, "AreaSelect.Region.Kinki"),
-        ( 440, 725, "AreaSelect.Region.Chugoku"),
-        ( 440, 860, "AreaSelect.Region.Shikoku"),
-        ( 250, 870, "AreaSelect.Region.Kyushu"),
-        ( 220, 200, "AreaSelect.Region.Okinawa"),
+        (1120, 220, "AreaSelect.Region.Hokkaido", "北海道"),
+        (1050, 470, "AreaSelect.Region.Tohoku",   "東北"),
+        ( 985, 680, "AreaSelect.Region.Kanto",    "関東"),
+        ( 800, 690, "AreaSelect.Region.Chubu",    "中部"),
+        ( 650, 760, "AreaSelect.Region.Kinki",    "近畿"),
+        ( 460, 715, "AreaSelect.Region.Chugoku",  "中国"),
+        ( 470, 830, "AreaSelect.Region.Shikoku",  "四国"),
+        ( 280, 850, "AreaSelect.Region.Kyushu",   "九州"),
+        ( 250, 300, "AreaSelect.Region.Okinawa",  "沖縄"),
     };
 
     private string BuildLabelsSvg()
@@ -35,10 +36,19 @@
         // text-anchor / dominant-baseline は CSS でも指定しているが、属性で明示しておくと
         // ブラウザによる解釈差を避けられる。
         var sb = new System.Text.StringBuilder();
+        var isJa = System.Globalization.CultureInfo.CurrentUICulture.TwoLetterISOLanguageName == "ja";
+
         foreach (var r in Regions)
         {
-            var label = System.Net.WebUtility.HtmlEncode(L[r.Key].Value);
-            sb.Append($"<text x=\"{r.X}\" y=\"{r.Y}\" text-anchor=\"middle\" dominant-baseline=\"central\" class=\"area-label\">{label}</text>");
+            var mainLabel = System.Net.WebUtility.HtmlEncode(L[r.Key].Value);
+            sb.Append($"<text x=\"{r.X}\" y=\"{r.Y}\" text-anchor=\"middle\" dominant-baseline=\"central\" class=\"area-label\">{mainLabel}</text>");
+
+            // 日本語以外の言語の時は、日本語表記（観光標識と照合用）をメインの下に小さく併記
+            if (!isJa)
+            {
+                var jaLabel = System.Net.WebUtility.HtmlEncode(r.JaName);
+                sb.Append($"<text x=\"{r.X}\" y=\"{r.Y + 45}\" text-anchor=\"middle\" dominant-baseline=\"central\" xml:lang=\"ja\" class=\"area-label area-label-sub\">{jaLabel}</text>");
+            }
         }
         return sb.ToString();
     }

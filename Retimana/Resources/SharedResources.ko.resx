@@ -51,4 +51,54 @@
   <data name="AreaSelect.Region.Okinawa" xml:space="preserve">
     <value>오키나와</value>
   </data>
+  <data name="AreaSelect.ComingSoon" xml:space="preserve">
+    <value>미공개</value>
+  </data>
+  <data name="AreaSelect.Prefecture.Hokkaido" xml:space="preserve"><value>홋카이도</value></data>
+  <data name="AreaSelect.Prefecture.Aomori" xml:space="preserve"><value>아오모리현</value></data>
+  <data name="AreaSelect.Prefecture.Iwate" xml:space="preserve"><value>이와테현</value></data>
+  <data name="AreaSelect.Prefecture.Miyagi" xml:space="preserve"><value>미야기현</value></data>
+  <data name="AreaSelect.Prefecture.Akita" xml:space="preserve"><value>아키타현</value></data>
+  <data name="AreaSelect.Prefecture.Yamagata" xml:space="preserve"><value>야마가타현</value></data>
+  <data name="AreaSelect.Prefecture.Fukushima" xml:space="preserve"><value>후쿠시마현</value></data>
+  <data name="AreaSelect.Prefecture.Ibaraki" xml:space="preserve"><value>이바라키현</value></data>
+  <data name="AreaSelect.Prefecture.Tochigi" xml:space="preserve"><value>도치기현</value></data>
+  <data name="AreaSelect.Prefecture.Gunma" xml:space="preserve"><value>군마현</value></data>
+  <data name="AreaSelect.Prefecture.Saitama" xml:space="preserve"><value>사이타마현</value></data>
+  <data name="AreaSelect.Prefecture.Chiba" xml:space="preserve"><value>지바현</value></data>
+  <data name="AreaSelect.Prefecture.Tokyo" xml:space="preserve"><value>도쿄도</value></data>
+  <data name="AreaSelect.Prefecture.Kanagawa" xml:space="preserve"><value>가나가와현</value></data>
+  <data name="AreaSelect.Prefecture.Niigata" xml:space="preserve"><value>니가타현</value></data>
+  <data name="AreaSelect.Prefecture.Toyama" xml:space="preserve"><value>도야마현</value></data>
+  <data name="AreaSelect.Prefecture.Ishikawa" xml:space="preserve"><value>이시카와현</value></data>
+  <data name="AreaSelect.Prefecture.Fukui" xml:space="preserve"><value>후쿠이현</value></data>
+  <data name="AreaSelect.Prefecture.Yamanashi" xml:space="preserve"><value>야마나시현</value></data>
+  <data name="AreaSelect.Prefecture.Nagano" xml:space="preserve"><value>나가노현</value></data>
+  <data name="AreaSelect.Prefecture.Gifu" xml:space="preserve"><value>기후현</value></data>
+  <data name="AreaSelect.Prefecture.Shizuoka" xml:space="preserve"><value>시즈오카현</value></data>
+  <data name="AreaSelect.Prefecture.Aichi" xml:space="preserve"><value>아이치현</value></data>
+  <data name="AreaSelect.Prefecture.Mie" xml:space="preserve"><value>미에현</value></data>
+  <data name="AreaSelect.Prefecture.Shiga" xml:space="preserve"><value>시가현</value></data>
+  <data name="AreaSelect.Prefecture.Kyoto" xml:space="preserve"><value>교토부</value></data>
+  <data name="AreaSelect.Prefecture.Osaka" xml:space="preserve"><value>오사카부</value></data>
+  <data name="AreaSelect.Prefecture.Hyogo" xml:space="preserve"><value>효고현</value></data>
+  <data name="AreaSelect.Prefecture.Nara" xml:space="preserve"><value>나라현</value></data>
+  <data name="AreaSelect.Prefecture.Wakayama" xml:space="preserve"><value>와카야마현</value></data>
+  <data name="AreaSelect.Prefecture.Tottori" xml:space="preserve"><value>돗토리현</value></data>
+  <data name="AreaSelect.Prefecture.Shimane" xml:space="preserve"><value>시마네현</value></data>
+  <data name="AreaSelect.Prefecture.Okayama" xml:space="preserve"><value>오카야마현</value></data>
+  <data name="AreaSelect.Prefecture.Hiroshima" xml:space="preserve"><value>히로시마현</value></data>
+  <data name="AreaSelect.Prefecture.Yamaguchi" xml:space="preserve"><value>야마구치현</value></data>
+  <data name="AreaSelect.Prefecture.Tokushima" xml:space="preserve"><value>도쿠시마현</value></data>
+  <data name="AreaSelect.Prefecture.Kagawa" xml:space="preserve"><value>가가와현</value></data>
+  <data name="AreaSelect.Prefecture.Ehime" xml:space="preserve"><value>에히메현</value></data>
+  <data name="AreaSelect.Prefecture.Kochi" xml:space="preserve"><value>고치현</value></data>
+  <data name="AreaSelect.Prefecture.Fukuoka" xml:space="preserve"><value>후쿠오카현</value></data>
+  <data name="AreaSelect.Prefecture.Saga" xml:space="preserve"><value>사가현</value></data>
+  <data name="AreaSelect.Prefecture.Nagasaki" xml:space="preserve"><value>나가사키현</value></data>
+  <data name="AreaSelect.Prefecture.Kumamoto" xml:space="preserve"><value>구마모토현</value></data>
+  <data name="AreaSelect.Prefecture.Oita" xml:space="preserve"><value>오이타현</value></data>
+  <data name="AreaSelect.Prefecture.Miyazaki" xml:space="preserve"><value>미야자키현</value></data>
+  <data name="AreaSelect.Prefecture.Kagoshima" xml:space="preserve"><value>가고시마현</value></data>
+  <data name="AreaSelect.Prefecture.Okinawa" xml:space="preserve"><value>오키나와현</value></data>
 </root>

@@ -51,4 +51,54 @@
   <data name="AreaSelect.Region.Okinawa" xml:space="preserve">
     <value>沖縄</value>
   </data>
+  <data name="AreaSelect.ComingSoon" xml:space="preserve">
+    <value>未公開</value>
+  </data>
+  <data name="AreaSelect.Prefecture.Hokkaido" xml:space="preserve"><value>北海道</value></data>
+  <data name="AreaSelect.Prefecture.Aomori" xml:space="preserve"><value>青森県</value></data>
+  <data name="AreaSelect.Prefecture.Iwate" xml:space="preserve"><value>岩手県</value></data>
+  <data name="AreaSelect.Prefecture.Miyagi" xml:space="preserve"><value>宮城県</value></data>
+  <data name="AreaSelect.Prefecture.Akita" xml:space="preserve"><value>秋田県</value></data>
+  <data name="AreaSelect.Prefecture.Yamagata" xml:space="preserve"><value>山形県</value></data>
+  <data name="AreaSelect.Prefecture.Fukushima" xml:space="preserve"><value>福島県</value></data>
+  <data name="AreaSelect.Prefecture.Ibaraki" xml:space="preserve"><value>茨城県</value></data>
+  <data name="AreaSelect.Prefecture.Tochigi" xml:space="preserve"><value>栃木県</value></data>
+  <data name="AreaSelect.Prefecture.Gunma" xml:space="preserve"><value>群馬県</value></data>
+  <data name="AreaSelect.Prefecture.Saitama" xml:space="preserve"><value>埼玉県</value></data>
+  <data name="AreaSelect.Prefecture.Chiba" xml:space="preserve"><value>千葉県</value></data>
+  <data name="AreaSelect.Prefecture.Tokyo" xml:space="preserve"><value>東京都</value></data>
+  <data name="AreaSelect.Prefecture.Kanagawa" xml:space="preserve"><value>神奈川県</value></data>
+  <data name="AreaSelect.Prefecture.Niigata" xml:space="preserve"><value>新潟県</value></data>
+  <data name="AreaSelect.Prefecture.Toyama" xml:space="preserve"><value>富山県</value></data>
+  <data name="AreaSelect.Prefecture.Ishikawa" xml:space="preserve"><value>石川県</value></data>
+  <data name="AreaSelect.Prefecture.Fukui" xml:space="preserve"><value>福井県</value></data>
+  <data name="AreaSelect.Prefecture.Yamanashi" xml:space="preserve"><value>山梨県</value></data>
+  <data name="AreaSelect.Prefecture.Nagano" xml:space="preserve"><value>長野県</value></data>
+  <data name="AreaSelect.Prefecture.Gifu" xml:space="preserve"><value>岐阜県</value></data>
+  <data name="AreaSelect.Prefecture.Shizuoka" xml:space="preserve"><value>静岡県</value></data>
+  <data name="AreaSelect.Prefecture.Aichi" xml:space="preserve"><value>愛知県</value></data>
+  <data name="AreaSelect.Prefecture.Mie" xml:space="preserve"><value>三重県</value></data>
+  <data name="AreaSelect.Prefecture.Shiga" xml:space="preserve"><value>滋賀県</value></data>
+  <data name="AreaSelect.Prefecture.Kyoto" xml:space="preserve"><value>京都府</value></data>
+  <data name="AreaSelect.Prefecture.Osaka" xml:space="preserve"><value>大阪府</value></data>
+  <data name="AreaSelect.Prefecture.Hyogo" xml:space="preserve"><value>兵庫県</value></data>
+  <data name="AreaSelect.Prefecture.Nara" xml:space="preserve"><value>奈良県</value></data>
+  <data name="AreaSelect.Prefecture.Wakayama" xml:space="preserve"><value>和歌山県</value></data>
+  <data name="AreaSelect.Prefecture.Tottori" xml:space="preserve"><value>鳥取県</value></data>
+  <data name="AreaSelect.Prefecture.Shimane" xml:space="preserve"><value>島根県</value></data>
+  <data name="AreaSelect.Prefecture.Okayama" xml:space="preserve"><value>岡山県</value></data>
+  <data name="AreaSelect.Prefecture.Hiroshima" xml:space="preserve"><value>広島県</value></data>
+  <data name="AreaSelect.Prefecture.Yamaguchi" xml:space="preserve"><value>山口県</value></data>
+  <data name="AreaSelect.Prefecture.Tokushima" xml:space="preserve"><value>徳島県</value></data>
+  <data name="AreaSelect.Prefecture.Kagawa" xml:space="preserve"><value>香川県</value></data>
+  <data name="AreaSelect.Prefecture.Ehime" xml:space="preserve"><value>愛媛県</value></data>
+  <data name="AreaSelect.Prefecture.Kochi" xml:space="preserve"><value>高知県</value></data>
+  <data name="AreaSelect.Prefecture.Fukuoka" xml:space="preserve"><value>福岡県</value></data>
+  <data name="AreaSelect.Prefecture.Saga" xml:space="preserve"><value>佐賀県</value></data>
+  <data name="AreaSelect.Prefecture.Nagasaki" xml:space="preserve"><value>長崎県</value></data>
+  <data name="AreaSelect.Prefecture.Kumamoto" xml:space="preserve"><value>熊本県</value></data>
+  <data name="AreaSelect.Prefecture.Oita" xml:space="preserve"><value>大分県</value></data>
+  <data name="AreaSelect.Prefecture.Miyazaki" xml:space="preserve"><value>宮崎県</value></data>
+  <data name="AreaSelect.Prefecture.Kagoshima" xml:space="preserve"><value>鹿児島県</value></data>
+  <data name="AreaSelect.Prefecture.Okinawa" xml:space="preserve"><value>沖縄県</value></data>
 </root>

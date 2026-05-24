@@ -1,53 +1,168 @@
 @page "/area"
 @inject IStringLocalizer<SharedResources> L
 
+@{
+    var isJa = System.Globalization.CultureInfo.CurrentUICulture.TwoLetterISOLanguageName == "ja";
+}
+
 <PageTitle>@L["AreaSelect.Title"] - Retimana</PageTitle>
 
 <div class="area-select">
     <h1 class="page-title">@L["AreaSelect.Title"]</h1>
     <svg class="japan-map" viewBox="0 0 1536 1024" preserveAspectRatio="xMidYMid meet"
          xmlns="http://www.w3.org/2000/svg" role="img" aria-label="@L["AreaSelect.MapAlt"]">
-        <image href="images/japanmap.png" x="0" y="0" width="1536" height="1024" />
+        <image href="images/japan_map.png" x="0" y="0" width="1536" height="1024" />
         <g class="area-labels">
             @((MarkupString)BuildLabelsSvg())
         </g>
     </svg>
+
+    <div class="prefecture-list">
+        @foreach (var group in PrefectureGroups)
+        {
+            <section class="region-group">
+                <h2 class="region-heading">@L[group.RegionKey]</h2>
+                <ul class="prefecture-items">
+                    @foreach (var pref in group.Prefectures)
+                    {
+                        <li>
+                            <button type="button"
+                                    class="prefecture-button"
+                                    disabled="@(!pref.IsAvailable)"
+                                    aria-label="@(L[pref.Key].Value + (pref.IsAvailable ? "" : " (" + L["AreaSelect.ComingSoon"].Value + ")"))">
+                                <span class="pref-name">@L[pref.Key]</span>
+                                @if (!isJa)
+                                {
+                                    <span class="pref-sub" xml:lang="ja">@pref.JaName</span>
+                                }
+                                @if (!pref.IsAvailable)
+                                {
+                                    <span class="coming-soon">@L["AreaSelect.ComingSoon"]</span>
+                                }
+                            </button>
+                        </li>
+                    }
+                </ul>
+            </section>
+        }
+    </div>
 </div>
 
 @code {
-    // 座標は地図画像（1536×1024）上の中心位置。JaName は日本語以外の言語表示時に
-    // メインラベルの下に小さく併記する用（観光標識との照合のため）。
+    // 地図上の地方名ラベル
     private static readonly (int X, int Y, string Key, string JaName)[] Regions = new[]
     {
-        (1120, 220, "AreaSelect.Region.Hokkaido", "北海道"),
-        (1050, 470, "AreaSelect.Region.Tohoku",   "東北"),
-        ( 985, 680, "AreaSelect.Region.Kanto",    "関東"),
-        ( 800, 690, "AreaSelect.Region.Chubu",    "中部"),
-        ( 650, 760, "AreaSelect.Region.Kinki",    "近畿"),
-        ( 460, 715, "AreaSelect.Region.Chugoku",  "中国"),
-        ( 470, 830, "AreaSelect.Region.Shikoku",  "四国"),
-        ( 280, 850, "AreaSelect.Region.Kyushu",   "九州"),
-        ( 250, 300, "AreaSelect.Region.Okinawa",  "沖縄"),
+        (1160, 170, "AreaSelect.Region.Hokkaido", "北海道"),
+        (1020, 430, "AreaSelect.Region.Tohoku",   "東北"),
+        ( 980, 640, "AreaSelect.Region.Kanto",    "関東"),
+        ( 800, 660, "AreaSelect.Region.Chubu",    "中部"),
+        ( 660, 750, "AreaSelect.Region.Kinki",    "近畿"),
+        ( 460, 710, "AreaSelect.Region.Chugoku",  "中国"),
+        ( 490, 820, "AreaSelect.Region.Shikoku",  "四国"),
+        ( 290, 860, "AreaSelect.Region.Kyushu",   "九州"),
+        ( 250, 150, "AreaSelect.Region.Okinawa",  "沖縄"),
+    };
+
+    private const int SubLabelOffsetY = 43;
+
+    // 地方ごとの都道府県リスト。
+    // JaName は非日本語モード時にメインラベルの下に小さく併記する（観光標識との照合用）。
+    // IsAvailable=true のものだけ実際にバス情報あり（MVPは京都のみ）。
+    private record Prefecture(string Key, string JaName, bool IsAvailable);
+    private record PrefectureGroup(string RegionKey, Prefecture[] Prefectures);
+
+    private static readonly PrefectureGroup[] PrefectureGroups = new[]
+    {
+        new PrefectureGroup("AreaSelect.Region.Hokkaido", new[]
+        {
+            new Prefecture("AreaSelect.Prefecture.Hokkaido", "北海道", false),
+        }),
+        new PrefectureGroup("AreaSelect.Region.Tohoku", new[]
+        {
+            new Prefecture("AreaSelect.Prefecture.Aomori",    "青森県", false),
+            new Prefecture("AreaSelect.Prefecture.Iwate",     "岩手県", false),
+            new Prefecture("AreaSelect.Prefecture.Miyagi",    "宮城県", false),
+            new Prefecture("AreaSelect.Prefecture.Akita",     "秋田県", false),
+            new Prefecture("AreaSelect.Prefecture.Yamagata",  "山形県", false),
+            new Prefecture("AreaSelect.Prefecture.Fukushima", "福島県", false),
+        }),
+        new PrefectureGroup("AreaSelect.Region.Kanto", new[]
+        {
+            new Prefecture("AreaSelect.Prefecture.Ibaraki",  "茨城県",   false),
+            new Prefecture("AreaSelect.Prefecture.Tochigi",  "栃木県",   false),
+            new Prefecture("AreaSelect.Prefecture.Gunma",    "群馬県",   false),
+            new Prefecture("AreaSelect.Prefecture.Saitama",  "埼玉県",   false),
+            new Prefecture("AreaSelect.Prefecture.Chiba",    "千葉県",   false),
+            new Prefecture("AreaSelect.Prefecture.Tokyo",    "東京都",   false),
+            new Prefecture("AreaSelect.Prefecture.Kanagawa", "神奈川県", false),
+        }),
+        new PrefectureGroup("AreaSelect.Region.Chubu", new[]
+        {
+            new Prefecture("AreaSelect.Prefecture.Niigata",   "新潟県", false),
+            new Prefecture("AreaSelect.Prefecture.Toyama",    "富山県", false),
+            new Prefecture("AreaSelect.Prefecture.Ishikawa",  "石川県", false),
+            new Prefecture("AreaSelect.Prefecture.Fukui",     "福井県", false),
+            new Prefecture("AreaSelect.Prefecture.Yamanashi", "山梨県", false),
+            new Prefecture("AreaSelect.Prefecture.Nagano",    "長野県", false),
+            new Prefecture("AreaSelect.Prefecture.Gifu",      "岐阜県", false),
+            new Prefecture("AreaSelect.Prefecture.Shizuoka",  "静岡県", false),
+            new Prefecture("AreaSelect.Prefecture.Aichi",     "愛知県", false),
+        }),
+        new PrefectureGroup("AreaSelect.Region.Kinki", new[]
+        {
+            new Prefecture("AreaSelect.Prefecture.Mie",      "三重県",   false),
+            new Prefecture("AreaSelect.Prefecture.Shiga",    "滋賀県",   false),
+            new Prefecture("AreaSelect.Prefecture.Kyoto",    "京都府",   true),  // MVP: 京都府のみ有効
+            new Prefecture("AreaSelect.Prefecture.Osaka",    "大阪府",   false),
+            new Prefecture("AreaSelect.Prefecture.Hyogo",    "兵庫県",   false),
+            new Prefecture("AreaSelect.Prefecture.Nara",     "奈良県",   false),
+            new Prefecture("AreaSelect.Prefecture.Wakayama", "和歌山県", false),
+        }),
+        new PrefectureGroup("AreaSelect.Region.Chugoku", new[]
+        {
+            new Prefecture("AreaSelect.Prefecture.Tottori",   "鳥取県", false),
+            new Prefecture("AreaSelect.Prefecture.Shimane",   "島根県", false),
+            new Prefecture("AreaSelect.Prefecture.Okayama",   "岡山県", false),
+            new Prefecture("AreaSelect.Prefecture.Hiroshima", "広島県", false),
+            new Prefecture("AreaSelect.Prefecture.Yamaguchi", "山口県", false),
+        }),
+        new PrefectureGroup("AreaSelect.Region.Shikoku", new[]
+        {
+            new Prefecture("AreaSelect.Prefecture.Tokushima", "徳島県", false),
+            new Prefecture("AreaSelect.Prefecture.Kagawa",    "香川県", false),
+            new Prefecture("AreaSelect.Prefecture.Ehime",     "愛媛県", false),
+            new Prefecture("AreaSelect.Prefecture.Kochi",     "高知県", false),
+        }),
+        new PrefectureGroup("AreaSelect.Region.Kyushu", new[]
+        {
+            new Prefecture("AreaSelect.Prefecture.Fukuoka",   "福岡県",   false),
+            new Prefecture("AreaSelect.Prefecture.Saga",      "佐賀県",   false),
+            new Prefecture("AreaSelect.Prefecture.Nagasaki",  "長崎県",   false),
+            new Prefecture("AreaSelect.Prefecture.Kumamoto",  "熊本県",   false),
+            new Prefecture("AreaSelect.Prefecture.Oita",      "大分県",   false),
+            new Prefecture("AreaSelect.Prefecture.Miyazaki",  "宮崎県",   false),
+            new Prefecture("AreaSelect.Prefecture.Kagoshima", "鹿児島県", false),
+        }),
+        new PrefectureGroup("AreaSelect.Region.Okinawa", new[]
+        {
+            new Prefecture("AreaSelect.Prefecture.Okinawa", "沖縄県", false),
+        }),
     };
 
     private string BuildLabelsSvg()
     {
-        // Razor の `<text>` 構文と衝突するため MarkupString で組み立てる。
-        // text-anchor / dominant-baseline は CSS でも指定しているが、属性で明示しておくと
-        // ブラウザによる解釈差を避けられる。
         var sb = new System.Text.StringBuilder();
-        var isJa = System.Globalization.CultureInfo.CurrentUICulture.TwoLetterISOLanguageName == "ja";
+        var isJaMode = System.Globalization.CultureInfo.CurrentUICulture.TwoLetterISOLanguageName == "ja";
 
         foreach (var r in Regions)
         {
             var mainLabel = System.Net.WebUtility.HtmlEncode(L[r.Key].Value);
             sb.Append($"<text x=\"{r.X}\" y=\"{r.Y}\" text-anchor=\"middle\" dominant-baseline=\"central\" class=\"area-label\">{mainLabel}</text>");
 
-            // 日本語以外の言語の時は、日本語表記（観光標識と照合用）をメインの下に小さく併記
-            if (!isJa)
+            if (!isJaMode)
             {
                 var jaLabel = System.Net.WebUtility.HtmlEncode(r.JaName);
-                sb.Append($"<text x=\"{r.X}\" y=\"{r.Y + 45}\" text-anchor=\"middle\" dominant-baseline=\"central\" xml:lang=\"ja\" class=\"area-label area-label-sub\">{jaLabel}</text>");
+                sb.Append($"<text x=\"{r.X}\" y=\"{r.Y + SubLabelOffsetY}\" text-anchor=\"middle\" dominant-baseline=\"central\" xml:lang=\"ja\" class=\"area-label area-label-sub\">{jaLabel}</text>");
             }
         }
         return sb.ToString();

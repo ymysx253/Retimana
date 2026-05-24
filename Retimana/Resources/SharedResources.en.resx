@@ -51,4 +51,54 @@
   <data name="AreaSelect.Region.Okinawa" xml:space="preserve">
     <value>Okinawa</value>
   </data>
+  <data name="AreaSelect.ComingSoon" xml:space="preserve">
+    <value>Not yet available</value>
+  </data>
+  <data name="AreaSelect.Prefecture.Hokkaido" xml:space="preserve"><value>Hokkaido</value></data>
+  <data name="AreaSelect.Prefecture.Aomori" xml:space="preserve"><value>Aomori</value></data>
+  <data name="AreaSelect.Prefecture.Iwate" xml:space="preserve"><value>Iwate</value></data>
+  <data name="AreaSelect.Prefecture.Miyagi" xml:space="preserve"><value>Miyagi</value></data>
+  <data name="AreaSelect.Prefecture.Akita" xml:space="preserve"><value>Akita</value></data>
+  <data name="AreaSelect.Prefecture.Yamagata" xml:space="preserve"><value>Yamagata</value></data>
+  <data name="AreaSelect.Prefecture.Fukushima" xml:space="preserve"><value>Fukushima</value></data>
+  <data name="AreaSelect.Prefecture.Ibaraki" xml:space="preserve"><value>Ibaraki</value></data>
+  <data name="AreaSelect.Prefecture.Tochigi" xml:space="preserve"><value>Tochigi</value></data>
+  <data name="AreaSelect.Prefecture.Gunma" xml:space="preserve"><value>Gunma</value></data>
+  <data name="AreaSelect.Prefecture.Saitama" xml:space="preserve"><value>Saitama</value></data>
+  <data name="AreaSelect.Prefecture.Chiba" xml:space="preserve"><value>Chiba</value></data>
+  <data name="AreaSelect.Prefecture.Tokyo" xml:space="preserve"><value>Tokyo</value></data>
+  <data name="AreaSelect.Prefecture.Kanagawa" xml:space="preserve"><value>Kanagawa</value></data>
+  <data name="AreaSelect.Prefecture.Niigata" xml:space="preserve"><value>Niigata</value></data>
+  <data name="AreaSelect.Prefecture.Toyama" xml:space="preserve"><value>Toyama</value></data>
+  <data name="AreaSelect.Prefecture.Ishikawa" xml:space="preserve"><value>Ishikawa</value></data>
+  <data name="AreaSelect.Prefecture.Fukui" xml:space="preserve"><value>Fukui</value></data>
+  <data name="AreaSelect.Prefecture.Yamanashi" xml:space="preserve"><value>Yamanashi</value></data>
+  <data name="AreaSelect.Prefecture.Nagano" xml:space="preserve"><value>Nagano</value></data>
+  <data name="AreaSelect.Prefecture.Gifu" xml:space="preserve"><value>Gifu</value></data>
+  <data name="AreaSelect.Prefecture.Shizuoka" xml:space="preserve"><value>Shizuoka</value></data>
+  <data name="AreaSelect.Prefecture.Aichi" xml:space="preserve"><value>Aichi</value></data>
+  <data name="AreaSelect.Prefecture.Mie" xml:space="preserve"><value>Mie</value></data>
+  <data name="AreaSelect.Prefecture.Shiga" xml:space="preserve"><value>Shiga</value></data>
+  <data name="AreaSelect.Prefecture.Kyoto" xml:space="preserve"><value>Kyoto</value></data>
+  <data name="AreaSelect.Prefecture.Osaka" xml:space="preserve"><value>Osaka</value></data>
+  <data name="AreaSelect.Prefecture.Hyogo" xml:space="preserve"><value>Hyogo</value></data>
+  <data name="AreaSelect.Prefecture.Nara" xml:space="preserve"><value>Nara</value></data>
+  <data name="AreaSelect.Prefecture.Wakayama" xml:space="preserve"><value>Wakayama</value></data>
+  <data name="AreaSelect.Prefecture.Tottori" xml:space="preserve"><value>Tottori</value></data>
+  <data name="AreaSelect.Prefecture.Shimane" xml:space="preserve"><value>Shimane</value></data>
+  <data name="AreaSelect.Prefecture.Okayama" xml:space="preserve"><value>Okayama</value></data>
+  <data name="AreaSelect.Prefecture.Hiroshima" xml:space="preserve"><value>Hiroshima</value></data>
+  <data name="AreaSelect.Prefecture.Yamaguchi" xml:space="preserve"><value>Yamaguchi</value></data>
+  <data name="AreaSelect.Prefecture.Tokushima" xml:space="preserve"><value>Tokushima</value></data>
+  <data name="AreaSelect.Prefecture.Kagawa" xml:space="preserve"><value>Kagawa</value></data>
+  <data name="AreaSelect.Prefecture.Ehime" xml:space="preserve"><value>Ehime</value></data>
+  <data name="AreaSelect.Prefecture.Kochi" xml:space="preserve"><value>Kochi</value></data>
+  <data name="AreaSelect.Prefecture.Fukuoka" xml:space="preserve"><value>Fukuoka</value></data>
+  <data name="AreaSelect.Prefecture.Saga" xml:space="preserve"><value>Saga</value></data>
+  <data name="AreaSelect.Prefecture.Nagasaki" xml:space="preserve"><value>Nagasaki</value></data>
+  <data name="AreaSelect.Prefecture.Kumamoto" xml:space="preserve"><value>Kumamoto</value></data>
+  <data name="AreaSelect.Prefecture.Oita" xml:space="preserve"><value>Oita</value></data>
+  <data name="AreaSelect.Prefecture.Miyazaki" xml:space="preserve"><value>Miyazaki</value></data>
+  <data name="AreaSelect.Prefecture.Kagoshima" xml:space="preserve"><value>Kagoshima</value></data>
+  <data name="AreaSelect.Prefecture.Okinawa" xml:space="preserve"><value>Okinawa</value></data>
 </root>

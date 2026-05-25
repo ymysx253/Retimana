@@ -367,3 +367,6 @@ document/UserMemo.txt
 
 # Claude Code ローカル設定
 .claude/settings.local.json
+
+# ODPT GTFS-JP サンプルの展開フォルダ（ZIPから復元可、サイズ大）
+/docs/odpt/Sample/*/

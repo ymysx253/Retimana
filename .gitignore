@@ -370,3 +370,6 @@ document/UserMemo.txt
 
 # ODPT GTFS-JP サンプルの展開フォルダ（ZIPから復元可、サイズ大）
 /docs/odpt/Sample/*/
+
+# Azure Functions local settings (シークレット含む)
+**/local.settings.json

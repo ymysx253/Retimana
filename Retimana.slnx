@@ -1,3 +1,7 @@
 <Solution>
-  <Project Path="Retimana/Retimana.csproj" />
+  <Folder Name="/src/">
+    <Project Path="src/Retimana.Web/Retimana.Web.csproj" />
+    <Project Path="src/Retimana.Functions.Gtfs/Retimana.Functions.Gtfs.csproj" />
+    <Project Path="src/Retimana.Functions.Realtime/Retimana.Functions.Realtime.csproj" />
+  </Folder>
 </Solution>

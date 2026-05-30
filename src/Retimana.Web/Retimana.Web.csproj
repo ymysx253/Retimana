@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <BlazorDisableThrowNavigationException>true</BlazorDisableThrowNavigationException>
+    <!-- .csproj 名が Retimana.Web.csproj だが、既存コードのネームスペース (Retimana) と
+         .resx の埋め込みマニフェスト名を変えないために RootNamespace / AssemblyName を固定 -->
+    <RootNamespace>Retimana</RootNamespace>
+    <AssemblyName>Retimana</AssemblyName>
+  </PropertyGroup>
+
+</Project>

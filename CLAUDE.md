@@ -52,10 +52,14 @@
   ```
 
 # 設計書
-- 機能ごとの設計書を [docs/](docs/) フォルダに格納する
-- 機能ごとに1ファイル（例: `docs/search.md`、`docs/realtime.md`）
-- ひな形は [docs/_template.md](docs/_template.md) を使う
-- 索引は [docs/README.md](docs/README.md) で管理する
+- 設計書は [docs/](docs/) 配下に整理されている。索引は [docs/README.md](docs/README.md)
+- フォルダ分類:
+  - `docs/features/` — 画面・機能の設計書（home / area-select / i18n / gtfs-ingestion 等）
+  - `docs/architecture/` — 横断的な技術設計（マップ全体設計、ODPT API 利用ガイド等）
+  - `docs/design/` — デザイン素材（画像・ロゴ）
+  - `docs/odpt/` — ODPT 外部資料（API仕様コピー・GTFS-JP サンプル）
+  - `docs/retimana_concept.md` — トップ: ブランドコンセプト
+- 新規追加・既存変更時はカテゴリの合うフォルダに置き、`docs/README.md` の索引にも追記する
 - **新しい機能を作るとき、または既存機能を変更するときは必ず設計書を更新する**
 - 設計書には以下を含める:
   - 概要
@@ -68,5 +72,5 @@
 
 # 除外フォルダ
 /.vs
-/Retimana/bin
-/Retimana/obj
+/src/**/bin
+/src/**/obj
